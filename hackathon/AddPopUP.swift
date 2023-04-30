@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct AddPopUP: View {
     @Environment(\.dismiss) var dismiss
@@ -33,12 +34,26 @@ struct AddPopUP: View {
                 TextField("Numero de tarjeta", text: $tarjeta)
                     .frame(width:300)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.decimalPad)
+                    .onReceive(Just(tarjeta)) { value in
+                                let filtered = "\(value)".filter { "0123456789".contains($0) }
+                                if filtered != value {
+                                    self.tarjeta = "\(filtered)"
+                                }
+                            }
                 
                 HStack{
                     Text("CVV:")
                     TextField("CVV", text: $cvv)
                         .frame(width:100)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .keyboardType(.decimalPad)
+                        .onReceive(Just(cvv)) { value in
+                                    let filtered = "\(value)".filter { "0123456789".contains($0) }
+                                    if filtered != value {
+                                        self.cvv = "\(filtered)"
+                                    }
+                                }
                     
                     Text("Fecha de expiración:")
                     TextField("MM/AA", text: $fde)
@@ -49,6 +64,13 @@ struct AddPopUP: View {
                 TextField("Saldo a agregar", text: $saldo)
                     .frame(width:300)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.decimalPad)
+                    .onReceive(Just(saldo)) { value in
+                                let filtered = "\(value)".filter { "0123456789".contains($0) }
+                                if filtered != value {
+                                    self.saldo = "\(filtered)"
+                                }
+                            }
             }
             Spacer()
             Button(action:{

@@ -16,7 +16,7 @@ struct MainView: View {
         NavigationView(){
             VStack{
                 HStack{
-                    Image("logo")
+                    Image("logo3")
                         .resizable()
                         .frame(width:100, height:90)
                     Spacer()
