@@ -9,16 +9,17 @@ import SwiftUI
 
 struct MainView: View {
     
-    @State var user = User(name:"Pepito", money: 300)
+    @State var user = User(name:"Pepito", money: 100)
     @State var data = RetrieveData()
+    @State var un = true
     
     var body: some View {
         NavigationView(){
             VStack{
                 HStack{
-                    Image("logo3")
+                    Image("logo4")
                         .resizable()
-                        .frame(width:100, height:90)
+                        .frame(width:100, height:100)
                     Spacer()
                     VStack{
                         Text(user.name)
@@ -46,7 +47,7 @@ struct MainView: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 50)
                             .frame(width:175, height: 30)
-                            .foregroundColor(.red)
+                            .foregroundColor(.green)
                         HStack{
                             Image(systemName: "plus")
                                 .foregroundColor(.white)
@@ -78,6 +79,9 @@ struct MainView: View {
                 
             }
             .padding()
+            .sheet(isPresented:$un){
+                LoginView()
+            }
         }
     }
 }
