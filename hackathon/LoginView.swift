@@ -12,6 +12,8 @@ struct LoginView: View {
     
     @State var email: String = ""
     @State var psswrd: String = ""
+    @State var storedJSON: String = ""
+
     
     var body: some View {
         
@@ -26,12 +28,13 @@ struct LoginView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(10)
                     .textContentType(.emailAddress)
-                TextField("Contraseña", text: $psswrd)
+                SecureField("Contraseña", text: $psswrd)
                     .frame(width: 350, height: 30)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 
                 Button(action: {
                     //codigo de inciiar sesion normal
+                    SaveUserDataToJson()
                     dismiss()
                     
                     print("navingationStack")
@@ -64,6 +67,28 @@ struct LoginView: View {
         
         
     }
+    
+    func SaveUserDataToJson() {
+            let userData = UserData(email: email, password: psswrd)
+            
+            do {
+                let encoder = JSONEncoder()
+                let jsonData = try encoder.encode(userData)
+                
+                if let jsonString = String(data: jsonData, encoding: .utf8) {
+                    storedJSON = jsonString
+                    // Store the JSON string wherever you need it
+                    print(jsonString)
+                }
+            } catch {
+                print("Error encoding user data: \(error)")
+            }
+        }
+}
+
+struct UserData: Codable {
+    let email: String
+    let password: String
 }
 
 

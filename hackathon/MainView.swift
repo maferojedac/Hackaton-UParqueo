@@ -40,7 +40,7 @@ struct MainView: View {
                 Text("Tu saldo es:")
                     .bold()
                     .font(.system(size:25))
-                Text("$"+String(user.money/100))
+                Text("$"+String(user.money))
                     .font(.system(size:25))
                     .padding(25)
                 NavigationLink(destination:PayView(saldo: user.money)){
