@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		067165612A2FFB5C00C474B2 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067165602A2FFB5C00C474B2 /* UserModel.swift */; };
 		FE1C410029FED792003E72C1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1C40FF29FED792003E72C1 /* MainView.swift */; };
 		FE1C410629FF2953003E72C1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1C410529FF2953003E72C1 /* LoginView.swift */; };
 		FE9E38DF29FDBA3F00E92EFB /* AddPopUP.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9E38DE29FDBA3F00E92EFB /* AddPopUP.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		067165602A2FFB5C00C474B2 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		FE1C40FF29FED792003E72C1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FE1C410529FF2953003E72C1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FE9E38DE29FDBA3F00E92EFB /* AddPopUP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPopUP.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				FEA11B2029FD627100FC6B92 /* hackathonApp.swift */,
 				FEA11B2229FD627100FC6B92 /* ContentView.swift */,
 				FE1C40FF29FED792003E72C1 /* MainView.swift */,
+				067165602A2FFB5C00C474B2 /* UserModel.swift */,
 				FE1C410529FF2953003E72C1 /* LoginView.swift */,
 				FEA11B3229FDA47C00FC6B92 /* PayPopUp.swift */,
 				FEA11B3029FD9FF900FC6B92 /* PayView.swift */,
@@ -154,6 +157,7 @@
 			files = (
 				FEA11B2329FD627100FC6B92 /* ContentView.swift in Sources */,
 				FE1C410629FF2953003E72C1 /* LoginView.swift in Sources */,
+				067165612A2FFB5C00C474B2 /* UserModel.swift in Sources */,
 				FE1C410029FED792003E72C1 /* MainView.swift in Sources */,
 				FEA11B3129FD9FF900FC6B92 /* PayView.swift in Sources */,
 				FE9E38DF29FDBA3F00E92EFB /* AddPopUP.swift in Sources */,

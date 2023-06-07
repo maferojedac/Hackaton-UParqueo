@@ -25,7 +25,7 @@ struct PayView: View {
                 Spacer()
                 Spacer()
             }
-            Text("$" + String(saldo/100))
+            Text("$" + String(saldo))
                 .font(.system(size:100))
             Spacer()
             Button(action:{
